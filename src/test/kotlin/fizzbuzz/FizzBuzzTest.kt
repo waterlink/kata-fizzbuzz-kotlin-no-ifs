@@ -33,8 +33,54 @@ class FizzBuzzTest {
     }
 
     @Test
+    fun `encode - returns buzz when other number is multiple of 5`() {
+        assertEquals("buzz-number is multiple of 5", "buzz", fizzBuzz.encode(10))
+    }
+
+    @Test
     fun `encode - returns fizzbuzz when number is multiple of 5 and 3`() {
         assertEquals("fizzbuzz-number is multiple of 3 and 5", "fizzbuzz", fizzBuzz.encode(15))
     }
+
+    @Test
+    fun `encode - returns fizzbuzz when other number is multiple of 5 and 3`() {
+        assertEquals("fizzbuzz-number is multiple of 3 and 5", "fizzbuzz", fizzBuzz.encode(60))
+    }
+
+    @Test
+    fun `encode - returns fizz when number contains second digit 3`() {
+        assertEquals("fizz-number is multiple of 3", "fizz", fizzBuzz.encode(13))
+    }
+
+    @Test
+    fun `encode - returns fizz when other number contains second digit 3`() {
+        assertEquals("fizz-number is multiple of 3", "fizz", fizzBuzz.encode(23))
+    }
+
+    @Test
+    fun `encode - returns fizz when number contains first digit 3`() {
+        assertEquals("fizz-number is multiple of 3", "fizz", fizzBuzz.encode(31))
+    }
+
+    @Test
+    fun `encode - returns fizz when other number contains first digit 3`() {
+        assertEquals("fizz-number is multiple of 3", "fizz", fizzBuzz.encode(32))
+    }
+
+    @Test
+    fun `encode - returns fizz when other number contains both digit 3`() {
+        assertEquals("fizz-number is multiple of 3", "fizz", fizzBuzz.encode(33))
+    }
+
+    @Test
+    fun `encode - returns fizzbuzz when number contains both digit 3 and is a multiple of 5`() {
+        assertEquals("fizzbuzz-number is multiple of 5 and contains 3", "fizzbuzz", fizzBuzz.encode(35))
+    }
+
+    @Test
+    fun `encode - returns fizzbuzz when number contains both digit 5 and is a multiple of 3`() {
+        assertEquals("fizzbuzz-number is multiple of 3 and contains 5", "fizzbuzz", fizzBuzz.encode(54))
+    }
+
 
 }
